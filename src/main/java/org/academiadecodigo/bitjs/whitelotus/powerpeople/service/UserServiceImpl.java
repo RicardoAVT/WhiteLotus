@@ -4,6 +4,7 @@ import org.academiadecodigo.bitjs.whitelotus.powerpeople.dao.UserDao;
 import org.academiadecodigo.bitjs.whitelotus.powerpeople.model.persistence.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -23,11 +24,13 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Transactional
     public User save(User user) {
         return userDao.saveOrUpdate(user);
     }
 
     @Override
+    @Transactional
     public void delete(Integer id) {
         //need to add exceptions to see if user exists
 
@@ -36,6 +39,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<User> list() {
-        return null;
+        return userDao.findAll();
     }
 }
