@@ -1,5 +1,6 @@
-package org.academiadecodigo.bitjs.whitelotus.powerpeople.converters;
+package org.academiadecodigo.bitjs.whitelotus.powerpeople.converters.user;
 
+import org.academiadecodigo.bitjs.whitelotus.powerpeople.converters.AbstractConverter;
 import org.academiadecodigo.bitjs.whitelotus.powerpeople.model.dto.UserDto;
 import org.academiadecodigo.bitjs.whitelotus.powerpeople.model.persistence.User;
 import org.springframework.stereotype.Component;
