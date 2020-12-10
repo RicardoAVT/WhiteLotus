@@ -1,7 +1,6 @@
 package org.academiadecodigo.bitjs.whitelotus.powerpeople.model.persistence;
 
 import org.academiadecodigo.bitjs.whitelotus.powerpeople.model.AbstractModel;
-
 import javax.persistence.Entity;
 import javax.persistence.Table;
 

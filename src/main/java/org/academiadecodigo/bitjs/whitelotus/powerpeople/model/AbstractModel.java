@@ -35,5 +35,6 @@ public abstract class AbstractModel implements Model {
         return "Model{" +
                 "id=" + id +
                 '}';
+
     }
 }
