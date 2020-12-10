@@ -6,15 +6,10 @@ public class UserDto {
 
     private Integer id;
 
-    @NotNull(message = "First name is mandatory")
-    @NotBlank(message = "First name is mandatory")
+    @NotNull(message = "Name is mandatory")
+    @NotBlank(message = "Name is mandatory")
     @Size(min = 3, max = 64)
-    private String firstName;
-
-    @NotNull(message = "First name is mandatory")
-    @NotBlank(message = "First name is mandatory")
-    @Size(min = 3, max = 64)
-    private String lastName;
+    private String name;
 
     @Email
     @NotBlank(message = "Email is mandatory")
@@ -32,20 +27,12 @@ public class UserDto {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getEmail() {
@@ -68,8 +55,7 @@ public class UserDto {
     public String toString() {
         return "UserForm{" +
                 "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
+                ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
                 '}';

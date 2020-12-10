@@ -7,25 +7,16 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "user")
 public class User extends AbstractModel {
-    private String firstName;
-    private String lastName;
+    private String name;
     private String email;
     private String phone;
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getEmail() {
@@ -47,8 +38,7 @@ public class User extends AbstractModel {
     @Override
     public String toString(){
         return "User{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
+                "name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
                 "} " + super.toString();

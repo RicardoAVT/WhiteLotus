@@ -13,10 +13,9 @@ public class UserToUserDto extends AbstractConverter<User, UserDto> {
 
         UserDto userDto = new UserDto();
         userDto.setId(user.getId());
-        userDto.setFirstName(user.getFirstName());
-        userDto.setLastName(userDto.getLastName());
-        userDto.setEmail(userDto.getEmail());
-        userDto.setPhone(userDto.getPhone());
+        userDto.setName(user.getName());
+        userDto.setEmail(user.getEmail());
+        userDto.setPhone(user.getPhone());
 
         return userDto;
     }
