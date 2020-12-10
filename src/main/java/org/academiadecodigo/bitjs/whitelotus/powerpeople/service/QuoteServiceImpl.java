@@ -10,7 +10,7 @@ public class QuoteServiceImpl implements QuoteService {
 
     private QuoteDao quoteDao;
 
-   @Autowired
+    @Autowired
     public void setQuoteDao(QuoteDao quoteDao) {
         this.quoteDao = quoteDao;
     }
@@ -19,6 +19,4 @@ public class QuoteServiceImpl implements QuoteService {
     public Quote get(Integer id){
        return quoteDao.findById(id);
     }
-
-
 }

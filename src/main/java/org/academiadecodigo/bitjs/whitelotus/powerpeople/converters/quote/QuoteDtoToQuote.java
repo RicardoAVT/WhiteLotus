@@ -1,4 +1,4 @@
-package org.academiadecodigo.bitjs.whitelotus.powerpeople.converters;
+package org.academiadecodigo.bitjs.whitelotus.powerpeople.converters.quote;
 
 import org.academiadecodigo.bitjs.whitelotus.powerpeople.model.dto.QuoteDto;
 import org.academiadecodigo.bitjs.whitelotus.powerpeople.model.persistence.Quote;

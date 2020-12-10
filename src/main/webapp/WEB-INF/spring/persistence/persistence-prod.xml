@@ -23,7 +23,7 @@
     </bean>
     <bean id="emFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="dataSource" ref="dataSource"/>
-        <property name="packagesToScan" value="org.academiadecodigo.bitjs.model"/>
+        <property name="packagesToScan" value="org.academiadecodigo.bitjs.whitelotus.powerpeople.model.persistence"/>
         <property name="jpaVendorAdapter">
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"/>
         </property>

@@ -14,4 +14,6 @@ public interface OrganizationService {
     void delete(Integer id);
 
     List<Organization> list();
+
+    Integer authenticate(String email, String password);
 }

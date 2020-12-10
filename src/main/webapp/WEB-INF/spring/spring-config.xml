@@ -11,7 +11,7 @@
     <!-- User @Controller, @Service annotations -->
     <mvc:annotation-driven/>
     <!-- Base package to search for spring beans -->
-    <context:component-scan base-package="org.academiadecodigo.bitjs"/>
+    <context:component-scan base-package="org.academiadecodigo.bitjs.whitelotus.powerpeople"/>
     <import resource="persistence.xml"/>
     <import resource="presentation.xml"/>
 </beans>

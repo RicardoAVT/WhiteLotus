@@ -4,10 +4,12 @@ import org.academiadecodigo.bitjs.whitelotus.powerpeople.dao.OrganizationDao;
 import org.academiadecodigo.bitjs.whitelotus.powerpeople.model.persistence.Organization;
 import org.academiadecodigo.bitjs.whitelotus.powerpeople.model.persistence.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+@Service
 public class OrganizationServiceImpl implements OrganizationService {
 
     private OrganizationDao organizationDao;
@@ -39,5 +41,11 @@ public class OrganizationServiceImpl implements OrganizationService {
     @Override
     public List<Organization> list() {
         return organizationDao.findAll();
+    }
+
+    @Override
+    @Transactional
+    public Integer authenticate(String email, String password) {
+        return organizationDao.authenticate(email, password);
     }
 }

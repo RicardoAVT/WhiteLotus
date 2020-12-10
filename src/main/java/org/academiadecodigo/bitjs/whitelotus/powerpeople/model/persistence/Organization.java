@@ -10,6 +10,7 @@ import javax.persistence.Table;
 public class Organization extends AbstractModel {
     private String name;
     private String email;
+    private String password;
     private String phone;
 
     public String getName() {
