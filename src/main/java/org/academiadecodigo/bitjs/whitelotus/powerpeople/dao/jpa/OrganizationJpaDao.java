@@ -26,12 +26,12 @@ public class OrganizationJpaDao extends GenericJpaDao<Organization> implements O
 
     @Override
     public String validate(String email) {
-        TypedQuery<Organization> query = em.createQuery("SELECT organization.email " +
+        TypedQuery<Organization> query = em.createQuery("SELECT organization " +
                 "FROM Organization organization where organization.email=:email", Organization.class);
 
         query.setParameter("email", email);
 
-        return query.getSingleResult().getEmail();
+        return (String) query.getParameterValue("email");
     }
 
 

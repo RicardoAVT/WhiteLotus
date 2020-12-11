@@ -11,9 +11,14 @@
         </a>
         <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Apoios</a></li>
-            <li><a href="#">Page 2</a></li>
-            <li><a href="#">Page 3</a></li>
+            <li><a th:href="@{'/user/charity'}">Charity</a></li>
+            <li><a th:href="@{'/user/about'}">About Us</a></li>
+            <li><a th:href="@{'/login'}">Login</a></li>
+            <!--<button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>-->
+            <li><a th:href="@{'/org/register'}">Sign Up</a></li>
+            <li th:if="${lastAction}" class="alert alert-success alert-dismissible" >
+                <strong>Action:</strong> <span th:text="${lastAction}"></span>
+            </li>
         </ul>
     </div>
 </nav>
@@ -64,20 +69,23 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-4">
-            <form>
-                <div class="form-group">
+            <form method="post" th:object="${userDto}" th:action="@{'/user/charity/volunteer'}">
+                <div class="form-group" th:classappend="${#fields.hasErrors('name')} ? has-error">
                     <label for="name">Full Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Name" />
+                    <input type="text" th:field="*{name}" class="form-control" id="name" placeholder="Name" />
+                    <span class="help-block" th:if="${#fields.hasErrors('name')}" th:errors="*{name}" ></span>
                 </div>
                 <br>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
+                <div class="form-group" th:classappend="${#fields.hasErrors('email')} ? has-error" >
+                    <label for="email">Email address</label>
+                    <input type="email" th:field="*{email}" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email"/>
+                    <span class="help-block" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
-                <div class="form-group">
+                <div class="form-group" th:classappend="${#fields.hasErrors('phone')} ? has-error" >
                     <label for="number">Phone Number</label>
-                    <input type="text" class="form-control" id="number" placeholder="Phone Number" />
+                    <input type="text" th:field="*{phone}" class="form-control" id="number" placeholder="Phone Number" />
+                    <span class="help-block" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></span>
                 </div>
                 <button type="submit" class="btn btn-info">Send</button>
             </form>

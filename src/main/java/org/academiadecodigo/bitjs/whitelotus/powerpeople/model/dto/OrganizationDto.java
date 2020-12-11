@@ -16,12 +16,11 @@ public class OrganizationDto {
 
     @NotNull(message = "Password is mandatory")
     @NotBlank(message = "Password is mandatory")
-    @Min(9)
+    @Size(min = 9)
     private String password;
 
+
     @Email
-    @NotNull(message = "Email is mandatory")
-    @NotBlank(message = "Email is mandatory")
     private String email;
 
     @Pattern(regexp = "^\\+?[0-9]*$", message = "Phone number contains invalid characters")
