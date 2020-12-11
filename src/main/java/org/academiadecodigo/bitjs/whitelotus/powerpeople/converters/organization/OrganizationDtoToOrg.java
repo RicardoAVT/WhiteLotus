@@ -23,8 +23,10 @@ public class OrganizationDtoToOrg implements Converter<OrganizationDto, Organiza
 
         org.setId(orgDto.getId());
         org.setName(orgDto.getName());
+        org.setPassword(orgDto.getPassword());
         org.setEmail(orgDto.getEmail());
         org.setPhone(orgDto.getPhone());
+        org.setWebsite(orgDto.getWebsite());
 
         return org;
     }

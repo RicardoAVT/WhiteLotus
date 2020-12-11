@@ -13,7 +13,6 @@ public class Organization extends AbstractModel {
     private String password;
     private String phone;
     private String website;
-    private String imageLink;
 
     public String getName() {
         return name;
@@ -37,5 +36,21 @@ public class Organization extends AbstractModel {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getWebsite() {
+        return website;
+    }
+
+    public void setWebsite(String website) {
+        this.website = website;
     }
 }

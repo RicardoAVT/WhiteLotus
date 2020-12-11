@@ -14,8 +14,10 @@ public class OrganizationToOrgDto extends AbstractConverter<Organization, Organi
 
         orgDto.setId(organization.getId());
         orgDto.setName(organization.getName());
+        orgDto.setPassword(organization.getPassword());
         orgDto.setEmail(organization.getEmail());
         orgDto.setPhone(organization.getPhone());
+        orgDto.setWebsite(organization.getWebsite());
 
         return orgDto;
     }

@@ -48,4 +48,12 @@ public class OrganizationServiceImpl implements OrganizationService {
     public Integer authenticate(String email, String password) {
         return organizationDao.authenticate(email, password);
     }
+
+    @Override
+    @Transactional
+    public String validate(String email) {
+        return organizationDao.validate(email);
+    }
+
+
 }

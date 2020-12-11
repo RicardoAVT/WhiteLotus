@@ -6,4 +6,6 @@ import org.academiadecodigo.bitjs.whitelotus.powerpeople.model.persistence.Organ
 public interface OrganizationDao extends Dao<Organization> {
 
     Integer authenticate(String email, String password);
+
+    String validate(String email);
 }

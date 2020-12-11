@@ -16,4 +16,6 @@ public interface OrganizationService {
     List<Organization> list();
 
     Integer authenticate(String email, String password);
+
+    String validate(String email);
 }
