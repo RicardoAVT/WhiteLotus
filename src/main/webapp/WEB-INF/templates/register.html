@@ -21,9 +21,9 @@
                         <span class="help-block" th:if="${#fields.hasErrors('password')}" th:errors="*{password}" ></span>
                     </div>
                     <div class="form-group" th:classappend="${#fields.hasErrors('email')} ? has-error">
-                        <input type="Email" th:field="*{email}" class="form-control" placeholder="Email" required="required">
-                        <span class="help-block" th:if="${#fields.hasErrors('invalid')}" th:errors="${invalid}" ></span>
-                        <span class="help-block" th:if="${#fields.hasErrors('email')}" th:errors="*{email}" ></span>
+                        <input type="email" th:field="*{email}" class="form-control" placeholder="Email" required="required">
+                        <!--<span class="help-block" th:if="${#fields.hasErrors('invalid')}" th:errors="*{invalid}" ></span>-->
+                        <!--<span class="help-block" th:if="${#fields.hasErrors('email')}" th:errors="*{email}" ></span>-->
                     </div>
                     <div class="form-group" th:classappend="${#fields.hasErrors('phone')} ? has-error">
                         <input type="text" th:field="*{phone}" class="form-control" placeholder="Phone" required="required">

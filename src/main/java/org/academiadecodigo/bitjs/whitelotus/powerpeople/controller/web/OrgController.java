@@ -54,7 +54,7 @@ public class OrgController {
         if(bindingResult.hasErrors()){
             return "register";
         }
-
+/*
         String email = organizationService.validate(organizationDto.getEmail());
 
         if(email != null){
@@ -62,7 +62,7 @@ public class OrgController {
             bindingResult.addError(error);
             return "register";
         }
-
+*/
         Organization registeredOrg = organizationService.save(organizationDtoToOrg.convert(organizationDto));
         redirectAttributes.addFlashAttribute("lastAction", "Registered " + registeredOrg.getName());
 

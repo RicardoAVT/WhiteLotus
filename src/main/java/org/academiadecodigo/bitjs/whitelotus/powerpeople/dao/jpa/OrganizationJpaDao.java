@@ -15,8 +15,8 @@ public class OrganizationJpaDao extends GenericJpaDao<Organization> implements O
 
     @Override
     public Integer authenticate(String email, String password) {
-        TypedQuery<Organization> query = em.createQuery("SELECT organization.id FROM Organization organization " +
-                "where organization.email=:email AND organization.password=:password", Organization.class);
+        TypedQuery<Integer> query = em.createQuery("SELECT organization.id FROM Organization organization " +
+                "where organization.email=:email AND organization.password=:password", Integer.class);
 
         query.setParameter("email", email);
         query.setParameter("password", password);
