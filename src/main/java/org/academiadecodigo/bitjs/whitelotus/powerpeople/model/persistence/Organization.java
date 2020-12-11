@@ -12,6 +12,8 @@ public class Organization extends AbstractModel {
     private String email;
     private String password;
     private String phone;
+    private String website;
+    private String imageLink;
 
     public String getName() {
         return name;
