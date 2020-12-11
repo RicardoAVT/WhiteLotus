@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <thymeleaf th:replace="header :: header"/>
+    <style>
+        div.gallery {
+            border: 1px solid #ccc;
+        }
+
+        div.gallery:hover {
+            border: 1px solid #777;
+        }
+
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .responsive {
+            padding: 0 6px;
+            float: left;
+            width: 24.99999%;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .responsive {
+                width: 49.99999%;
+                margin: 6px 0;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .responsive {
+                width: 100%;
+            }
+        }
+
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <a style="margin-top: -5px" class="navbar-brand" href="#">
+            <img src="https://i.ibb.co/6mjvSTP/shakeee-1.png" alt="Logo" style="width:60px;">
+        </a>
+        <ul class="nav navbar-nav">
+            <li><a href="#">Home</a></li>
+            <li ><a href="#">Charity</a></li>
+            <li class="active"><a href="#">About Us</a></li>
+            <li><a href="#">Page 3</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="image">
+    <img src="https://i.ibb.co/BTvvsmv/New-Project-3.png" alt="Equality" style="width:100%;">
+    <div class="centered">“Alone we can do so little, together we can do so much.”</div>
+</div>
+<h1  style="font-family: 'Montserrat'; text-align: center; margin-top: 50px">About Us</h1>
+<div class="container">
+    <div class="row">
+        <p style="margin-bottom: 30px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Commodo sed egestas egestas fringilla. Morbi leo urna molestie at. Bibendum est ultricies integer quis auctor elit. Odio euismod lacinia at quis risus sed vulputate odio. Mattis rhoncus urna neque viverra justo nec ultrices dui. Id neque aliquam vestibulum morbi blandit cursus risus at. Sit amet massa vitae tortor condimentum. Sem et tortor consequat id porta nibh venenatis. Tellus mauris a diam maecenas sed enim ut sem viverra. Consequat interdum varius sit amet mattis. Natoque penatibus et magnis dis. Pharetra magna ac placerat vestibulum lectus mauris. Erat nam at lectus urna duis convallis convallis tellus. Quam lacus suspendisse faucibus interdum. Amet tellus cras adipiscing enim eu turpis egestas. Mauris ultrices eros in cursus.</p>
+    </div>
+    <div class="responsive">
+        <div class="gallery">
+            <img src="https://i.ibb.co/MsqRM66/New-Project-5.png" alt="Rtoucedo" width="600" height="400">
+            <div class="desc"><strong>Ricardo Toucedo</strong></div>
+            <div class="desc"><i>ricardotoucedo@gmail.com</i></div>
+        </div>
+    </div>
+
+
+    <div class="responsive">
+        <div class="gallery">
+            <img src="https://i.ibb.co/0q9ZcG5/New-Project-6.png" alt="Graxinha" width="590" height="400">
+            <div class="desc"><strong>Rúben Lima</strong></div>
+            <div class="desc"><i>graxinha21@hotmail.com</i></div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <img src="https://ca.slack-edge.com/T0J8THHCZ-U01ALDR7YE5-d5c5e7910a92-512" alt="Travanca" width="600" height="400">
+            <div class="desc"><strong>Pedro Travanca</strong></div>
+            <div class="desc"><i>pedromtravanca@gmail.com</i></div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <img src="https://ca.slack-edge.com/T0J8THHCZ-U01ALDRH5HP-30623f84aa9d-512" alt="Johnny" width="600" height="400">
+            <div class="desc"><strong>João Andrade</strong></div>
+            <div class="desc"><i>joao_andrade_al@hotmail.com</i></div>
+        </div>
+    </div>
+</div>
+</body>
+<footer  style="background-color: #5BC0DE; margin-top: 35px"  class="page-footer font-small blue">
+    <thymeleaf th:replace="footer :: footer"/>
+</footer>
+</html>
