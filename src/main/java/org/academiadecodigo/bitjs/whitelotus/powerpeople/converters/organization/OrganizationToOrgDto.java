@@ -3,7 +3,9 @@ package org.academiadecodigo.bitjs.whitelotus.powerpeople.converters.organizatio
 import org.academiadecodigo.bitjs.whitelotus.powerpeople.converters.AbstractConverter;
 import org.academiadecodigo.bitjs.whitelotus.powerpeople.model.dto.OrganizationDto;
 import org.academiadecodigo.bitjs.whitelotus.powerpeople.model.persistence.Organization;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrganizationToOrgDto extends AbstractConverter<Organization, OrganizationDto> {
 
     @Override

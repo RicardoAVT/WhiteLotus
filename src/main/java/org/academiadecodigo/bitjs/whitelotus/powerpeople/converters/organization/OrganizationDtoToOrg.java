@@ -5,7 +5,9 @@ import org.academiadecodigo.bitjs.whitelotus.powerpeople.model.persistence.Organ
 import org.academiadecodigo.bitjs.whitelotus.powerpeople.service.OrganizationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrganizationDtoToOrg implements Converter<OrganizationDto, Organization> {
 
     private OrganizationService organizationService;
